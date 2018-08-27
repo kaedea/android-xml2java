@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+        maven {
+            url 'http://dl.bintray.com/jetbrains/intellij-plugin-service'
+        }
+
+    }
+    dependencies {
+        classpath "org.jetbrains.intellij.plugins:gradle-intellij-plugin:0.2.0-SNAPSHOT"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'org.jetbrains.intellij'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':xml2java')
+}
+
+intellij {
+    version '2018.1'
+}

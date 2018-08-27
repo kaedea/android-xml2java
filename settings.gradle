@@ -1,3 +1,4 @@
 rootProject.name = 'XML2JAVA'
-include 'xml2java'
+include ':xml2java'
+include ':plugin'
 
