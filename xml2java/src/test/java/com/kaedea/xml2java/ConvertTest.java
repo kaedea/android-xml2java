@@ -16,8 +16,8 @@ public class ConvertTest {
 
     @Test
     public void xmlWithFile() {
+        File xmlFile = new File(ConvertTest.class.getClassLoader().getResource("file/activity_main.xml").getFile());
         final String[] java = {null};
-        File xmlFile = new File("/Users/Kaede/Repository/Repos/X2C/app/src/main/res/layout/activity_main.xml");
 
         Xml2Java.convert(xmlFile, codes -> {
             java[0] = codes;
