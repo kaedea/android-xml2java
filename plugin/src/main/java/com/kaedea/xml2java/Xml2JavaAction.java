@@ -31,9 +31,11 @@ public class Xml2JavaAction extends AnAction {
             return;
         }
 
-        Xml2Java.convert(text, codes -> {
-            alert(codes);
-        });
+        showTextForm(text);
+    }
+
+    private void showTextForm(String text) {
+        new TextForm(text).show();
     }
 
     private void alert(String msg) {
