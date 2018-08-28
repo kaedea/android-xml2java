@@ -11,7 +11,7 @@ class Utils {
     public static String convert(@NotNull String xml) {
         final String[] java = {null};
         try {
-            Xml2Java.convert(xml, codes -> {
+            Xml2Java.INSTANCE.convert(xml, codes -> {
                 java[0] = codes;
             });
         } catch (Exception e) {
