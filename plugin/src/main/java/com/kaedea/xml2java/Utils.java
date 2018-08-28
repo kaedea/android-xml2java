@@ -13,6 +13,7 @@ class Utils {
         try {
             Xml2Java.INSTANCE.convert(xml, codes -> {
                 java[0] = codes;
+                return null;
             });
         } catch (Exception e) {
             java[0] = e.toString();
